@@ -742,7 +742,7 @@ print('-dpdf','Fig_1');
 
 %%Fig 4
 
-rf25(:,ak);
+
 bb=find(m25>5 & m25<10);
 for ct1=1:length(yx)
     aa=find(y25==yx(ct1));
@@ -776,7 +776,18 @@ rcr(1:2)=prctile(slt,[2.5 97.5]);
 
 
 
-
+%check the trends from each of these start years
+%plot up the shuffling time-series
+%change the start year to check each of the trends
+d1=find(yx>=1973); 
+X=[ones(size(yx(:))) yx(:)-mean(yx(:))];
+Xt=X;
+Xt(d1,2)=X(d1,2)-mean(X(d1,2));
+sl1=multilin_lsq(X(d1,:),ctex(d1,1));
+Yd1=X(d1,:)*sl1;
+sl2=multilin_lsq(X(d1,:),ctex(d1,2));
+Yd2=X(d1,:)*sl2;
+%
    
 
 nn=10000;
