@@ -4,7 +4,7 @@
 
 `Post_process_figs.m` takes all the data generated through interpolation to produce each of the figures and statistics in the manuscript.
 
-Both functions are commented, and please feel free to contact lin8@fas.harvard.edu if you have further questions.
+Both functions are commented, and please feel free to contact my full name at gmail.com if you have further questions.
 
 ## Data
 
